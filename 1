@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineStatus AI - Meu Ingresso</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="phone-wrapper">
+    <!-- Pop-up de Notificação do Celular -->
+    <div class="notification-pop" id="notificationPop">
+      <div class="notif-header">
+        <span>🤖 CineStatus AI • Agora</span>
+      </div>
+      <div class="notif-body" id="notifText">
+        Sua sessão foi atualizada!
+      </div>
+    </div>
+
+    <!-- Topo do App -->
+    <header class="app-nav">
+      <span class="back-btn">‹</span>
+      <h1>Meus Ingressos</h1>
+      <span class="profile-icon">👤</span>
+    </header>
+
+    <main class="app-body">
+      <!-- Card do Filme -->
+      <div class="movie-card">
+        <div class="poster-placeholder">🕷️</div>
+        <div class="movie-details">
+          <h2>Homem-Aranha: Um Novo Dia</h2>
+          <p class="cinema-name">CineSENAI — Sala 04 (3D)</p>
+          <div class="ticket-tags">
+            <span class="tag">Dublado</span>
+            <span class="tag">Assento D12</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAINEL CINESTATUS AI -->
+      <section class="cinestatus-box" id="statusBox">
+        <div class="status-header">
+          <span class="ai-badge">🤖 CineStatus AI</span>
+          <span class="live-dot">● AO VIVO</span>
+        </div>
+
+        <div class="status-content">
+          <div class="time-container">
+            <span class="label">Horário Previsto de Entrada</span>
+            <h1 id="timeDisplay">18:40</h1>
+          </div>
+          <div class="badge-status" id="statusBadge">SALA LIBERADA</div>
+        </div>
+
+        <div class="progress-bar-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <p class="status-desc" id="statusDesc">
+          A sala já foi higienizada. Pode se dirigir à entrada!
+        </p>
+
+        <div class="ai-tip" id="aiTip">
+          💡 <strong>Dica da IA:</strong> Apresente seu QR Code na porta.
+        </div>
+      </section>
+
+      <!-- QR Code do Ingresso -->
+      <div class="qrcode-section">
+        <h3>Seu Ingresso Digital</h3>
+        <div class="qr-box">
+          <div class="qr-code-img">📱 [ QR CODE ]</div>
+          <p>Aproxime o código do leitor na entrada da sala</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Controle de Demonstração -->
+    <footer class="demo-controller">
+      <span>⚙️ Painel de Testes (Simulação da IA):</span>
+      <div class="btn-group">
+        <button onclick="setSimulacao('normal')" class="btn-norm">1. Normal</button>
+        <button onclick="setSimulacao('limpeza')" class="btn-limp">2. Limpeza</button>
+        <button onclick="setSimulacao('atraso')" class="btn-atra">3. Atraso IA</button>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
