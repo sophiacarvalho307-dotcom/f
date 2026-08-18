@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #0f0f12;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.phone-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  background-color: #18181c;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+  border: 2px solid #2a2a32;
+  display: flex;
+  flex-direction: column;
+}
+
+.notification-pop {
+  position: absolute;
+  top: -80px;
+  left: 12px;
+  right: 12px;
+  background: #282835;
+  border: 1px solid #444455;
+  border-radius: 14px;
+  padding: 10px 14px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+  z-index: 999;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.notification-pop.show {
+  top: 12px;
+}
+
+.notif-header {
+  font-size: 0.68rem;
+  color: #00d2ff;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.notif-body {
+  font-size: 0.75rem;
+  color: #ffffff;
+}
+
+.app-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  background-color: #18181c;
+  border-bottom: 1px solid #282830;
+}
+
+.app-nav h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.back-btn, .profile-icon {
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.app-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.movie-card {
+  display: flex;
+  gap: 12px;
+  background: #22222a;
+  padding: 12px;
+  border-radius: 16px;
+  align-items: center;
+}
+
+.poster-placeholder {
+  width: 55px;
+  height: 75px;
+  background: linear-gradient(135deg, #e50914, #800000);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.movie-details h2 {
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.cinema-name {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.ticket-tags {
+  display: flex;
+  gap: 6px;
+}
+
+.tag {
+  background: #32323d;
+  font-size: 0.65rem;
+  padding: 3px 8px;
+  border-radius: 6px;
+  color: #ddd;
+}
+
+.cinestatus-box {
+  background: #202028;
+  border-radius: 18px;
+  padding: 16px;
+  border: 1px solid #333340;
+  transition: all 0.4s ease;
+}
+
+.status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.ai-badge {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #00d2ff;
+}
+
+.live-dot {
+  font-size: 0.65rem;
+  color: #2ed573;
+  font-weight: bold;
+}
+
+.status-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.time-container .label {
+  font-size: 0.7rem;
+  color: #888;
+  display: block;
+}
+
+.time-container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.badge-status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 6px;
+  background: #333340;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 100%;
+  background: #2ed573;
+  transition: all 0.5s ease;
+}
+
+.status-desc {
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.ai-tip {
+  background: #182535;
+  border-left: 3px solid #00a8ff;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  color: #b3e0ff;
+}
+
+.qrcode-section {
+  background: #22222a;
+  padding: 16px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.qrcode-section h3 {
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  color: #aaa;
+}
+
+.qr-box {
+  background: #ffffff;
+  color: #111;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.qr-code-img {
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 15px;
+  border: 2px dashed #111;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.qr-box p {
+  font-size: 0.68rem;
+  color: #555;
+}
+
+.demo-controller {
+  background: #111115;
+  padding: 12px;
+  border-top: 1px solid #252530;
+  text-align: center;
+}
+
+.demo-controller span {
+  font-size: 0.68rem;
+  color: #aaa;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+button {
+  border: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btn-norm { background: #2ed573; }
+.btn-limp { background: #ffa500; }
+.btn-atra { background: #ff4757; }
